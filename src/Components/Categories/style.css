@@ -1,0 +1,69 @@
+
+
+
+.categories-container {
+  display: flex;
+  margin-left: 13%;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-top: 35%;
+  margin-bottom: 3%;
+}
+
+.card1 {
+  background-image: url("https://res.cloudinary.com/dsjsbp6qy/image/upload/v1676862049/S%C3%A9_%C3%9Anica..._2_u4deyi.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card2 {
+  background-image: url("https://res.cloudinary.com/dsjsbp6qy/image/upload/v1676858479/S%C3%A9_%C3%9Anica..._mb526b.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card3 {
+  background-image: url("https://res.cloudinary.com/dsjsbp6qy/image/upload/v1676863933/S%C3%A9_%C3%9Anica..._3_lamwt5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.categories-container .card {
+  position: relative;
+  min-width: 345px;
+  height: 300px;
+  border-radius: 15px;
+  margin: 18px;
+  transition: 0.5s;
+  z-index: 1;
+  box-shadow: 0 0 20px 5px #2eecd6;
+}
+
+.categories-container .card:hover {
+  transform: rotateZ(10deg);
+  box-shadow: 0 0 20px 5px rgba(174, 37, 202, 0.714), 0 0 20px 5px rgba(174, 37, 202, 0.714);
+}
+
+@media screen and (max-width: 768px) {
+  .categories-container {
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 130%;
+  }
+  
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+.h1Cat {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 15%;
+  margin-left: 25%;
+  color: rgb(64, 175, 172);
+  text-shadow: 1px 0 10px;
+}
