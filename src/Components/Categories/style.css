@@ -7,8 +7,8 @@
   align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin-top: 35%;
-  margin-bottom: 3%;
+  margin-top: 15%;
+  margin-bottom: 7%;
 }
 
 .card1 {
@@ -49,7 +49,7 @@
   .categories-container {
     margin-left: 0;
     justify-content: center;
-    margin-top: 130%;
+    margin-top: 50%;
   }
   
   .card {

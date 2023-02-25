@@ -2,7 +2,6 @@ const SobreNosotras = () => {
     return (
       <div
         class="flex flex-col md:pb-6 lg:pb-8 mx-5 md:mx-10 lg:mx-20 space-y-3 md:space-y-5 lg:space-y-7 md:flex-row md:items-center md:space-x-3"
-        style={{ position: "relative", top: "20rem" }}
       >
         <div class="flex flex-col items-center w-full md:w-1/2 lg:w-2/3 md:relative md:top-16">
           <div class="max-w-lg md:mx-12 lg:mx-20 md:order-2">
@@ -29,9 +28,9 @@ const SobreNosotras = () => {
           </div>
         </div>
   
-        <div class="flex flex-col md:pb-6 lg:pb-8 mx-5 md:mx-10 lg:mx-20 space-y-3 md:space-y-5 lg:space-y-7 md:flex-row md:items-center md:space-x-3" style={{ position: "relative", top: "8rem" }}>
+        <div class="flex flex-col md:pb-6 lg:pb-8 mx-5 md:mx-10 lg:mx-20 space-y-3 md:space-y-5 lg:space-y-7 md:flex-row md:items-center md:space-x-3" style={{ position: "relative", top: "7rem" }}>
           <div class="flex-1 flex justify-center items-center md:w-1/2">
-          <img class="object-cover max-w-xs md:max-w-sm lg:max-w-xl rounded-md" src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1677085250/Logo_Marca_personal_Acuarela_a_mano_Azul__7_-removebg-preview_tndqxu.png" alt="apple watch photo" />
+          <img class="object-cover max-w-xs md:max-w-sm lg:max-w-xl" src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1677259441/fotor_2023-2-24_12_23_23_itnbcw.png" alt="apple watch photo" />
 
 
           </div>

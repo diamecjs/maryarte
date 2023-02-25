@@ -1,0 +1,13 @@
+.texto-con-imagen {
+    background-image: url('https://res.cloudinary.com/dsjsbp6qy/image/upload/v1677038332/Dise%C3%B1o_sin_t%C3%ADtulo_16_wzqpxi.png');
+    background-size:auto;
+    background-position: center;
+    color: white;
+    padding: 50px;
+  }
+
+  .texto{
+    font-size: medium;
+    font-weight: 600;
+    color: rgb(78, 84, 61);
+  }

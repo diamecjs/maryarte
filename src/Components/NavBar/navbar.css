@@ -40,6 +40,8 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 60px;
+  cursor: pointer;
+  color:white;
   z-index: 20; /* aumentar el valor de z-index */
   
 }
@@ -94,7 +96,7 @@ a {
     transform: translateY(-8px) rotate(-45deg);
   }
   .nav-menu {
-    position: fixed;
+    position:absolute;
     left: -100%;
     top: 149px;
     gap: 0;
