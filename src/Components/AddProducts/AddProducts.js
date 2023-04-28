@@ -4,7 +4,7 @@ import { getCategories } from "../../Redux/Slices/Categories/categoriesAction";
 import { postProduct } from "../../Redux/Slices/Products/productAction";
 import NavBar from "../NavBar/NavBar";
 import { useForm } from "react-hook-form";
-import Swal            from "sweetalert2";
+import Swal from "sweetalert2";
 
 
 export const AddProducts = () => {
@@ -75,11 +75,11 @@ export const AddProducts = () => {
     };
 
     return (
-        <div>
-            <NavBar />
-            <div class="min-h-screen p-8 flex justify-center items-center bg-gradient-to-br from-red-200 to-indigo-600">
-                <form class="w-full max-w-lg">
-                    <div class="bg-teal-500 px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
+<div>
+  <NavBar />
+  <div class="min-h-screen p-6 flex flex-col justify-center items-center bg-gradient-to-br from-red-200 to-indigo-600">
+    <form class="w-full  max-w-xs mr-12">
+                    <div class="bg-teal-500 px-5 py-8 rounded-xl w-screen shadow-md max-w-sm">
                         <div class="space-y-4">
                             <h1 class="text-center text-2xl font-semibold text-orange-600">Nuevo Producto</h1>
                             <div>
