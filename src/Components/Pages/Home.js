@@ -14,7 +14,7 @@ const Home = () => {
       <div className="static top-0 bottom-0 left-0 right-0">
         <NavBar />
         <Carrousel />
-        <div className="medio md:mt-18 md:pt-5">
+        <div className="medio">
           <div id="sobre-nosotras" > <SobreNosotras /></div>
           <hr className="border-t-4 border-teal-400" />
           <div id="categories" > <Categories /></div>

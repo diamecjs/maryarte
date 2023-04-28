@@ -3,10 +3,10 @@ const SobreNosotras = () => {
     <div className="flex flex-col md:pb-6 lg:pb-8 mx-0 p-0 space-y-3 md:space-y-5 lg:space-y-7 md:flex-row md:items-center md:space-x-3 bg-gradient-to-br from-pink-300 via-blue-300 via-red-200 to-purple-400 min-h-screen w-screen">
       <div className="flex flex-col items-center w-full md:w-1/2 lg:w-2/3 md:relative md:top-16">
         <div className="max-w-lg md:mx-12 lg:mx-20 md:order-2">
-          <h1 className="text-3xl ml-5 font-medium tracking-wide text-teal-500 dark:text-white md:text-4xl lg:text-5xl">
+          <h1 className="text-3xl ml-5 font-medium tracking-wide text-teal-500  md:text-4xl lg:text-5xl">
             Mar & Arte
           </h1>
-          <p className="font-semibold mt-4 mx-4 md:mx-8 dark:text-teal-600">
+          <p className="font-semibold mt-4 mx-4 md:mx-8 text-teal-600">
             ¡Bienvenidos a nuestro emprendimiento de tejido a crochet! Somos una
             madre y una hija apasionadas por el arte del tejido, y queremos
             compartir con ustedes nuestra pasión a través de nuestras

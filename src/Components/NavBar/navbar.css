@@ -94,6 +94,10 @@
     text-align: center;
     transition: 0.3s;
   }
+
+  .nav-menu a{
+    margin-top: 5px;
+  }
   .nav-item {
     margin: 16px 0;
   }
