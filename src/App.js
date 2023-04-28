@@ -10,7 +10,7 @@ import EditProduct from "./Components/EditProduct/EditProduct";
 
 import axios from "axios";
 
-axios.defaults.baseURL =  'http://localhost:3001/'
+axios.defaults.baseURL = "https://maryarte-back-production.up.railway.app/" || 'http://localhost:3001/'
 //"https://maryarte-back-production.up.railway.app/" ||
 
 function App() {
