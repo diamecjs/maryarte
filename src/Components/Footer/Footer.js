@@ -11,24 +11,14 @@ const Footer = () => {
 
   return (
 
-    <footer class="relative bg-cyan-500 pt-8 pb-2 fixed bottom-0 w-full">
+    <footer class="relative bg-cyan-500 pt-8 sm:pt-0 pb-2 fixed bottom-0 w-full mt-auto">
+
 
     <div id="Contacto">
-
-      <link
-        rel="stylesheet"
-        href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-      />
-
-        <div class="container mx-auto px-4">
-          <div class="flex flex-wrap">
-            <div class="">
+          <div class="flex">
+            <div class="flex">
               <div class="flex flex-row items-center space-x-4">
-              <a href="">
+              <a href="https://www.instagram.com/maryarte_maghyray/" target="_blank">
                 <img
                   class="justify-items-center"
                   src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png"
@@ -53,22 +43,23 @@ const Footer = () => {
                 />
               </div>
             </div>
-            <div class="w-full lg:w-3/12  ml-auto text-right px-4">
-              <span class="block uppercase text-white text-sm font-semibold mb-2">
-                Contacto
-              </span>
-              <ul class="list-unstyled">
-                <li class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm">
-                  📞 - 310 764 9291
-                </li>
-                <li class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm">
-                  Rodadero - Santa Marta
-                </li>
-                <li class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm">
-                📧 maghyray@hotmail.com
-                </li>
-              </ul>
-            </div>
+            <div class="w-5/6 lg:w-5/6  text-right px-4 overflow-hidden">
+  <span class="block uppercase text-white text-sm font-semibold mb-2">
+    Contacto
+  </span>
+  <ul class="list-unstyled">
+    <li class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm whitespace-nowrap">
+      📞 - 310 764 9291
+    </li>
+    <li class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm whitespace-nowrap">
+      Rodadero - Santa Marta
+    </li>
+    <li class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm whitespace-nowrap">
+      📧 maghyray@hotmail.com
+    </li>
+  </ul>
+</div>
+
             
           </div>
           <hr class="my-6 border-blueGray-300" />
@@ -83,12 +74,11 @@ const Footer = () => {
             </div>
             <div class="text-xs text-white font-semibold py-1">
                 Created By 
-               <a class="text-xs text-cyan-900 hover:text-blueGray-800 font-semibold py-1" href="https://www.instagram.com/myd.developer/">
+               <a class=" mr-20 text-xs text-cyan-900 hover:text-blueGray-800 font-semibold py-1" href="https://portfolio-diame.vercel.app/" target="_blank">
                 M&D Creaciones Web
               </a>
             </div>
           </div>
-        </div>
         </div>
       </footer>
      

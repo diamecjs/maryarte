@@ -1,23 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-header {
-  background-color: #07beda;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  font-family: "Questrial", sans-serif;
-}
 
 .navbar {
   min-height: 70px;
@@ -25,6 +7,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  background-color: #07beda;
   
 }
 .sticky {
@@ -32,7 +15,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* aumentar el valor de z-index */
+  z-index: 10;
 }
 
 .nav-menu {
@@ -41,21 +24,26 @@ a {
   align-items: center;
   gap: 60px;
   cursor: pointer;
-  color:white;
-  z-index: 20; /* aumentar el valor de z-index */
-  
+  color:rgb(255, 255, 255);
+  font-family: "Questrial", sans-serif;
+  font-weight: 600;
+  z-index: 20; 
+  transition: 0.7s ease;  
 }
-
+.nav-menu a:hover {
+  color: rgb(255, 136, 0);
+}
 .nav-branding {
   font-size: 2rem;
+  display: inline-block;
 }
-.nav-link {
-  transition: 0.7s ease;
-  color: white;
+.login{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+
 }
-.nav-link:hover {
-  color: rgb(115, 8, 182);
-}
+
 
 .hamburguer {
   display: none;
@@ -80,7 +68,7 @@ a {
   }
   /* Estilos para el carrusel de imágenes */
   #default-carousel {
-    margin-top: 70px; /* Altura de la NavBar */
+    margin-top: 70px; 
   }
 
   .hamburguer {

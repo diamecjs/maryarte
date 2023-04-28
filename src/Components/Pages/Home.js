@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
 import Carrousel from "../Carrousel/Carrousel";
+import Carousel from "../Carousel/Carousel"
 import Categories from "../Categories/Categories";
 import "./styleHome.css";
 
@@ -9,12 +10,14 @@ import SobreNosotras from "../SobreNosotras/SobreNosotras";
 
 const Home = () => {
   return (
-    <div className="w-screen mx-auto relative contenedor-home">
+    <div className="w-screen mx-auto relative contenedor-home bg-white">
       <div className="static top-0 bottom-0 left-0 right-0">
         <NavBar />
         <Carrousel />
         <div className="medio">
           <div  id="sobre-nosotras" > <SobreNosotras/></div>
+          <hr className="border-t-4 border-teal-400" />
+
           <div  id="categories" > <Categories/></div>
           
         </div>
@@ -29,7 +32,9 @@ const Home = () => {
           />
         </a>
       </div>
-       
+       <div>
+        <Carousel />
+       </div>
       <div id="contacto" className="static bottom-0 left-0 right-0">
         <Footer />
       </div>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./navbar.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 
@@ -11,32 +11,49 @@ export const NavBar = () => {
     navMenuRef.current.classList.toggle("active");
   };
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+      const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
+      if (storedIsLoggedIn === "true") {
+          setIsLoggedIn(true);
+      }
+  }, []);
+
 
   const scrollToTop = () => {
     scroll.scrollToTop();
-};
+  };
 
   return (
     <header>
       <nav className="navbar">
-        <img
-          className="nav-brandign"
-          src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1676432024/Mar___Arte__2_-removebg-preview_zs16rz.png"
-          width={150}
-          height={150}
-          onClick={scrollToTop}
-        />
+        <div className="nav-images">
+          <a href="/">
+            <img
+              className="nav-branding"
+              src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1676432024/Mar___Arte__2_-removebg-preview_zs16rz.png"
+              width={150}
+              height={150}
+              onClick={scrollToTop}
+            />
+          </a>
+          <a href="/login">
+          <img
+            className="login"
+            src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1682467205/4332353f5e7327a30370312c2b49f779-removebg-preview_yfocca.png"
+          />
+          </a>
+        </div>
         <ul className="nav-menu" ref={navMenuRef}>
-          <Link
-            activeClass="active"
-            to="section1"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
+          <a href="/">
             Inicio
-          </Link>
+          </a>
+          {typeof isLoggedIn === "boolean" && isLoggedIn ? (
+          <a href="/addProducts">
+            Add Products
+          </a>
+             ) : null}
           <Link
             activeClass="active"
             to="sobre-nosotras"
