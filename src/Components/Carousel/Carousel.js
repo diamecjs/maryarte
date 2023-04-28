@@ -76,17 +76,15 @@ const Carousel = () => {
   
 
   return (
-    <div className="grid-cols-3 gap-2 w-full">
-    <Slider {...settings}>
-      {slides.map((slide, index) => (
-        <div key={index} className="w-80 h-80">
-          <img src={slide.image} alt={`Slide ${index + 1}`} style={{ objectFit: "cover" , width: "100%", height: "100%" }} />
-        </div>
-      ))}
-    </Slider>
-  </div>
-  
-  
+<div className="grid grid-cols-3 gap-2 w-screen overflow-hidden" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}>
+  <Slider {...settings}>
+    {slides.map((slide, index) => (
+      <div key={index}>
+        <img src={slide.image} alt={`Slide ${index + 1}`} className="w-96 h-96 object-cover" />
+      </div>
+    ))}
+  </Slider>
+</div>
   );
 };
 export default Carousel;

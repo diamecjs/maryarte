@@ -19,9 +19,9 @@ const Vestimenta = () => {
 
 
     return(
-        <div class="bg-gradient-to-b from-orange-500 via-pink-500 via-white to-purple-700">
+        <div className="bg-gradient-to-b from-orange-500 via-pink-500 via-white to-purple-700">
         <NavBar />
-    <div className="grid gap-4 grid-cols-3 grid-rows-3">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         {Object.values(products)
 
 
@@ -29,7 +29,7 @@ const Vestimenta = () => {
             .map((el) => {
 
                 return (
-                    <div className=" p-8">
+                    <div className="p-8">
                         <Products
                             key={el.id}
                             id={el.id}

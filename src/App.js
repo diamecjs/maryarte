@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 import React, { useState, useEffect } from "react";
 import Home from "./Components/Pages/Home";
 import Accesorios from "./Components/Pages/Accesorios/Accesorios";
@@ -11,15 +10,13 @@ import EditProduct from "./Components/EditProduct/EditProduct";
 
 import axios from "axios";
 
-axios.defaults.baseURL="https://maryarte-back-production.up.railway.app/"
+axios.defaults.baseURL = 'http://localhost:3001/'
+//"https://maryarte-back-production.up.railway.app/" ||
 
 function App() {
 
-  const dispatch = useDispatch();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   
- 
-
   useEffect(() => {
       const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
       if (storedIsLoggedIn === "true") {

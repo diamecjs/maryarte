@@ -14,12 +14,10 @@ const Home = () => {
       <div className="static top-0 bottom-0 left-0 right-0">
         <NavBar />
         <Carrousel />
-        <div className="medio">
-          <div  id="sobre-nosotras" > <SobreNosotras/></div>
+        <div className="medio md:mt-18 md:pt-5">
+          <div id="sobre-nosotras" > <SobreNosotras /></div>
           <hr className="border-t-4 border-teal-400" />
-
-          <div  id="categories" > <Categories/></div>
-          
+          <div id="categories" > <Categories /></div>
         </div>
       </div>
       <div className="whatsapp-btn">
@@ -32,9 +30,9 @@ const Home = () => {
           />
         </a>
       </div>
-       <div>
+      <div>
         <Carousel />
-       </div>
+      </div>
       <div id="contacto" className="static bottom-0 left-0 right-0">
         <Footer />
       </div>

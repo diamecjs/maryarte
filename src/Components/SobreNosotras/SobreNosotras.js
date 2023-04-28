@@ -6,7 +6,7 @@ const SobreNosotras = () => {
         <h1 className="text-3xl font-medium tracking-wide text-teal-500 dark:text-white md:text-4xl lg:text-5xl">
           Mar & Arte
         </h1>
-        <p className="font-semibold mt-4 dark:text-teal-600">
+        <p className="font-semibold mt-4 mx-4 md:mx-8 dark:text-teal-600">
           ¡Bienvenidos a nuestro emprendimiento de tejido a crochet! Somos una
           madre y una hija apasionadas por el arte del tejido, y queremos
           compartir con ustedes nuestra pasión a través de nuestras
@@ -25,7 +25,7 @@ const SobreNosotras = () => {
         </p>
       </div>
     </div>
-
+  
     <div className="flex flex-col md:pb-6 lg:pb-8 mx-0 p-0 space-y-3 md:space-y-5 lg:space-y-7 md:flex-row md:items-center md:space-x-3">
       <div className="flex-1 flex justify-center mt-20 items-center md:w-1/2">
         <img className="object-cover max-w-xs md:max-w-sm lg:max-w-xl" src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1682462693/mar_y_arte-removebg-preview_sl4dvz.png" alt="apple watch photo" />
