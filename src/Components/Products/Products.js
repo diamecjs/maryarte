@@ -55,7 +55,7 @@ const Products = ({ id,
 
     return (
         <div class="max-w-2xl mx-auto">
-            <div class="bg-white shadow-md rounded-lg max-w-xs dark:bg-orange-500 border-2 border-teal-600">
+            <div class="shadow-md rounded-lg max-w-xs bg-orange-500 border-2 border-teal-600">
                 <a href="#">
                     <img class="rounded-t-lg p-8 mx-auto my-0 w-full h-64 object-cover" src={image} alt="product image" />
                 </a>
