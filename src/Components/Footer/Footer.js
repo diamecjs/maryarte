@@ -16,7 +16,7 @@ const Footer = () => {
 
       <div id="Contacto">
         <div class="flex">
-          <div class="flex ml-5">
+          <div class="flex ml-3">
             <div class="flex flex-row items-center space-x-2">
               <a href="https://www.instagram.com/maryarte_maghyray/" target="_blank">
                 <img
@@ -43,7 +43,7 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div class="w-5/6 lg:w-5/6  text-right mr-10 overflow-hidden">
+          <div class="w-5/6 lg:w-5/6  text-right px-4 overflow-hidden">
             <span class="block uppercase text-white text-sm font-semibold mb-2">
               Contacto
             </span>

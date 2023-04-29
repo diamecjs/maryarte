@@ -14,10 +14,10 @@ export const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-      const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
-      if (storedIsLoggedIn === "true") {
-          setIsLoggedIn(true);
-      }
+    const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
+    if (storedIsLoggedIn === "true") {
+      setIsLoggedIn(true);
+    }
   }, []);
 
 
@@ -39,10 +39,10 @@ export const NavBar = () => {
             />
           </a>
           <a href="/login">
-          <img
-            className="login"
-            src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1682467205/4332353f5e7327a30370312c2b49f779-removebg-preview_yfocca.png"
-          />
+            <img
+              className="login"
+              src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1682467205/4332353f5e7327a30370312c2b49f779-removebg-preview_yfocca.png"
+            />
           </a>
         </div>
         <ul className="nav-menu" ref={navMenuRef}>
@@ -50,10 +50,10 @@ export const NavBar = () => {
             Inicio
           </a>
           {typeof isLoggedIn === "boolean" && isLoggedIn ? (
-          <a href="/addProducts">
-            Add Products
-          </a>
-             ) : null}
+            <a href="/addProducts">
+              Add Products
+            </a>
+          ) : null}
           <Link
             activeClass="active"
             to="sobre-nosotras"
@@ -84,6 +84,17 @@ export const NavBar = () => {
           >
             Contacto
           </Link>
+          <div className="instagram-image">
+          <a href="https://www.instagram.com/maryarte_maghyray/" target="_blank">
+            <img
+              class=""
+              src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png"
+              alt="instagram"
+              width={50}
+              height={50}
+            />
+          </a>
+          </div>
         </ul>
         <div
           className="hamburguer"
