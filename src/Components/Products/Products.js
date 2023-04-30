@@ -8,19 +8,11 @@ import Swal            from "sweetalert2";
 
 
 
-const Products = ({ id,
-    name,
-    image,
-    disponible,
-    category,
-    description,
-    price,
-}) => {
-
-
+const Products = ({ id, name, image, disponible, category, description, price }) => {
     const dispatch = useDispatch();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+    
+  
     useEffect(() => {
         const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
         if (storedIsLoggedIn === "true") {
@@ -107,8 +99,8 @@ const Products = ({ id,
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-3xl font-bold text-gray-900 dark:text-white">$ {price}</span>
-                        <a href="#"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Agrega al carrito</a>
+                        <button onClick={() => onAddProduct(Products)}
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Agrega al carrito</button>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,7 @@ function EditProduct() {
         price: "",
         category: "",
         description: "",
+        quantity:"",
     });
 
     useEffect(() => {
@@ -134,11 +135,19 @@ function EditProduct() {
                             </div>
                             <div>
                                 <label for="price" class="block mb-1 text-gray-600 font-semibold">Precio $</label>
-                                <input type="text"
+                                <input type="number"
                                     value={productData.price}
                                     onChange={handleInputChange}
                                     name="price"
                                     placeholder="Precio" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                            </div>
+                            <div>
+                                <label for="quantity" class="block mb-1 text-gray-600 font-semibold">Precio $</label>
+                                <input type="number"
+                                    value={productData.quantity}
+                                    onChange={handleInputChange}
+                                    name="quantity"
+                                    placeholder="Cantidad" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                         </div>
                         <button type="submit"

@@ -16,6 +16,7 @@ export const AddProducts = () => {
         category: "",
         description: "",
         price: "",
+        quantity: "",
     });
 
     const { register } = useForm();
@@ -59,6 +60,7 @@ export const AddProducts = () => {
             category: "",
             description: "",
             price: "",
+            quantity: "",
         });
         Swal.fire(
             '¡Producto Agregado!',
@@ -75,10 +77,10 @@ export const AddProducts = () => {
     };
 
     return (
-<div>
-  <NavBar />
-  <div class="min-h-screen p-6 flex flex-col justify-center items-center bg-gradient-to-br from-red-200 to-indigo-600">
-    <form class="w-full  max-w-xs mr-12">
+        <div>
+            <NavBar />
+            <div class="min-h-screen p-6 flex flex-col justify-center items-center bg-gradient-to-br from-red-200 to-indigo-600">
+                <form class="w-full  max-w-xs mr-12">
                     <div class="bg-teal-500 px-5 py-8 rounded-xl w-screen shadow-md max-w-sm">
                         <div class="space-y-4">
                             <h1 class="text-center text-2xl font-semibold text-orange-600">Nuevo Producto</h1>
@@ -146,6 +148,16 @@ export const AddProducts = () => {
                                     value={input.price}
                                     onChange={handleChange}
                                     placeholder="Precio" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                            </div>
+                            <div>
+                                <label for="quantity" class="block mb-1 text-gray-600 font-semibold">Cantidad</label>
+                                <input type="number" id="quantity"
+                                    name="quantity"
+                                    value={input.quantity}
+                                    placeholder="Cantidad"
+                                    onChange={handleChange}
+                                    min={1}
+                                    max={5} class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                         </div>
                         <button onClick={handleSubmit} type="submit" class="mt-4 w-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide"> Crear Producto</button>
