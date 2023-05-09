@@ -12,8 +12,9 @@ import Cart from "./Components/Cart/Cart";
 import { ShoppingCartProvider } from "./Components/Cart/cartContext";
 import axios from "axios";
 
-axios.defaults.baseURL =  'http://localhost:3001/'
-//"https://maryarte-back-production.up.railway.app/" ||
+
+axios.defaults.baseURL = "https://maryarte-back-production.up.railway.app/" 
+//'http://localhost:3001/'
 
 function App() {
 
