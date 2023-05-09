@@ -1,49 +1,45 @@
 import Products from "../../Products/Products";
-import NavBar from "../../NavBar/NavBar"
-import Footer from "../../Footer/Footer"
+import NavBar from "../../NavBar/NavBar";
+import Footer from "../../Footer/Footer";
 import React, { useEffect } from "react";
 import { getProducts } from "../../../Redux/Slices/Products/productAction";
 import { useDispatch, useSelector } from "react-redux";
 
+
 const Bolsos = () => {
-
-    const dispatch = useDispatch();
-    const { products } = useSelector((state) => state.products);
-
-    useEffect(() => {
-        dispatch(getProducts());
-    }, [dispatch]);
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
+ 
 
 
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
 
-    return(
-        <div className="bg-gradient-to-b from-orange-500 via-pink-500 via-white to-purple-700">
-        <NavBar />
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
+  return (
+    <div className="bg-gradient-to-b from-orange-500 via-pink-500 via-white to-purple-700">
+      <NavBar />
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         {Object.values(products)
-
-
-            .filter(products => products.category === "Bolsos")
-            .map((el) => {
-
-                return (
-                    <div className="p-8">
-                        <Products
-                            key={el.id}
-                            id={el.id}
-                            name={el.name}
-                            image={el.image}
-                            description={el.description}
-                            disponible={el.disponible}
-                            price={el.price}
-                        />
-                    </div>
-                );
-            })}
+          .filter((product) => product?.category === "Bolsos")
+          .map((product) => {
+            return (
+              <div className="p-8" key={product.id}>
+                <Products
+                  id={product.id}
+                  name={product.name}
+                  image={product.image}
+                  description={product.description}
+                  disponible={product.disponible}
+                  price={product.price}
+                  />
+              </div>
+            );
+          })}
+      </div>
+      <Footer />
     </div>
-   <Footer />
-    </div>
-    )
-}
+  );
+};
 
 export default Bolsos;

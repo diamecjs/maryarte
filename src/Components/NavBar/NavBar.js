@@ -1,6 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./navbar.css";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+import { CartContext } from "../Cart/cartContext";
+import { useContext } from "react";
+
 
 export const NavBar = () => {
   const hamburguerRef = useRef(null);
@@ -20,6 +24,13 @@ export const NavBar = () => {
     }
   }, []);
 
+  const [cart, setCart] = useContext(CartContext);
+
+  const quantity = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
+
+  
 
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -29,7 +40,7 @@ export const NavBar = () => {
     <header>
       <nav className="navbar">
         <div className="nav-images">
-          <a href="/">
+          <RouterLink to="/">
             <img
               className="nav-branding"
               src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1676432024/Mar___Arte__2_-removebg-preview_zs16rz.png"
@@ -37,24 +48,24 @@ export const NavBar = () => {
               height={150}
               onClick={scrollToTop}
             />
-          </a>
-          <a href="/login">
+          </RouterLink>
+          <RouterLink to="/login">
             <img
               className="login"
               src="https://res.cloudinary.com/dsjsbp6qy/image/upload/v1682467205/4332353f5e7327a30370312c2b49f779-removebg-preview_yfocca.png"
             />
-          </a>
+          </RouterLink>
         </div>
         <ul className="nav-menu" ref={navMenuRef}>
-          <a href="/">
+          <RouterLink to="/">
             Inicio
-          </a>
+          </RouterLink>
           {typeof isLoggedIn === "boolean" && isLoggedIn ? (
-            <a href="/addProducts">
+            <RouterLink to="/addProducts">
               Add Products
-            </a>
+            </RouterLink>
           ) : null}
-          <Link
+          <ScrollLink
             activeClass="active"
             to="sobre-nosotras"
             spy={true}
@@ -63,8 +74,8 @@ export const NavBar = () => {
             duration={500}
           >
             Sobre Nosotras
-          </Link>
-          <Link
+            </ScrollLink>
+          <ScrollLink
             activeClass="active"
             to="categories"
             spy={true}
@@ -73,8 +84,8 @@ export const NavBar = () => {
             duration={500}
           >
             Catálogo
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             activeClass="active"
             to="contacto"
             spy={true}
@@ -83,9 +94,13 @@ export const NavBar = () => {
             duration={500}
           >
             Contacto
-          </Link>
+          </ScrollLink>
+          <RouterLink style={{ display: "flex", alignItems: "center" }} to="/cart">
+          Carrito  ({quantity})
+          <img class="" src="https://img.icons8.com/?size=512&id=n8AfEu6DRzCR&format=png" width={50} height={50}/>
+          </RouterLink>
           <div className="instagram-image">
-          <a href="https://www.instagram.com/maryarte_maghyray/" target="_blank">
+          <RouterLink to="https://www.instagram.com/maryarte_maghyray/" target="_blank">
             <img
               class=""
               src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png"
@@ -93,7 +108,7 @@ export const NavBar = () => {
               width={50}
               height={50}
             />
-          </a>
+          </RouterLink>
           </div>
         </ul>
         <div

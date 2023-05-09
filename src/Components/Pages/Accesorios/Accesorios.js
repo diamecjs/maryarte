@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { getProducts } from "../../../Redux/Slices/Products/productAction";
 import { useDispatch, useSelector } from "react-redux";
 
-const Accesorios = () => {
+const Accesorios = ({ addCart }) => {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
 
@@ -29,6 +29,7 @@ const Accesorios = () => {
                   description={product.description}
                   disponible={product.disponible}
                   price={product.price}
+                  addCart={addCart}
                 />
               </div>
             );
