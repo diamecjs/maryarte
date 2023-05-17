@@ -85,7 +85,7 @@ const Products = ({ id, name, image, disponible, category, description, price })
     <div class="max-w-2xl mx-auto">
       <div class="shadow-md rounded-lg max-w-xs bg-orange-500 border-2 border-teal-600">
         <a href="#">
-          <img class="rounded-t-lg p-8 mx-auto my-0 w-full h-64 object-cover" src={image} alt="product image" />
+        <img class="rounded-t-lg p-8 mx-auto my-0 w-80 h-80 object-fit" src={image} alt="product image"  />
         </a>
         <div class="px-5 pb-5">
           <a href="#">
