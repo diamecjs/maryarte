@@ -12,13 +12,14 @@ const Accesorios = ({ addCart }) => {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
+  
 
   return (
     <div className="bg-gradient-to-b from-orange-500 via-pink-500 via-white to-purple-700">
       <NavBar />
       <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         {Object.values(products)
-          .filter((product) => product.category === "Accesorios")
+          .filter((product) => product?.category === "Accesorios")
           .map((product) => {
             return (
               <div className="p-8" key={product.id}>

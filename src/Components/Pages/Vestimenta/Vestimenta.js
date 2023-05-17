@@ -18,6 +18,7 @@ const Vestimenta = ({ addCart }) => {
 
 
 
+
     return(
         <div className="bg-gradient-to-b from-orange-500 via-pink-500 via-white to-purple-700">
         <NavBar />
@@ -25,7 +26,7 @@ const Vestimenta = ({ addCart }) => {
         {Object.values(products)
 
 
-            .filter(products => products.category === "Vestimenta")
+            .filter(product => product?.category === "Vestimenta")
             .map((el) => {
 
                 return (
